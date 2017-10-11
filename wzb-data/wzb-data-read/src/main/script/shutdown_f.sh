@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh stop wzb-data-read-0.0.1.jar wzb-date-read.out $1  

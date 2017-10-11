@@ -1,0 +1,1 @@
+curl -X POST "localhost:9051/shutdown"

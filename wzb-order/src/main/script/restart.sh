@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh restart wzb-order-0.0.1.jar wzb-order.out $1

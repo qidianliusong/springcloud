@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh start eureka-server-0.0.1.jar eureka-server.out $1  

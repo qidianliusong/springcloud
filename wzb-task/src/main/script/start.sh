@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh start wzb-task-0.0.1.jar wzb-task.out $1

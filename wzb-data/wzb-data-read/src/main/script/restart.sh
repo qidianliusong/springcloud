@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh restart wzb-data-read-0.0.1.jar wzb-data-read.out $1  

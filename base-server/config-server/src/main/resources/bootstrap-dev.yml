@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: config-server
+  jmx:
+    default_domain: cloud.config.server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git.jiuchunjiaoyu.com/zhxy-java/config-repo.git
+          username: liusongsong
+          password: Lssjc1234
+          search-paths: wzb*
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.80:8761/eureka/,http://192.168.1.81:8761/eureka/
+server:
+  port: 8888
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+management:
+  port: 8889

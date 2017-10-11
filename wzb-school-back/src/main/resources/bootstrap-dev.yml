@@ -1,0 +1,34 @@
+server:
+  port: 10050
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+
+management:
+  address: localhost
+  port: 10051
+
+spring:
+  application:
+    name: wzb-school-back
+  cloud:
+    config:
+     #uri: http://localhost:8888
+     discovery:
+       enabled: true
+       serviceId: config-server
+     name: wzb-school-back
+     profile: ${spring.profiles.active:dev}
+     label: master
+
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.80:8761/eureka/,http://192.168.1.81:8761/eureka/
+

@@ -1,0 +1,1 @@
+$(cd "$(dirname "$0")";pwd)/boot.sh stop config-server-0.0.1.jar config-server.out $1  
